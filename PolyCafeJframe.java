@@ -286,7 +286,7 @@ public void init() {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBillManager;
     private javax.swing.JButton btnCardManager;
@@ -301,7 +301,7 @@ public void init() {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel lblFullname;
     private javax.swing.JLabel lblPhoto;
-    // End of variables declaration//GEN-END:variables
+    //ilovemen19020222222
 
     
 }

@@ -143,17 +143,17 @@ public class XJdbc {
     }
 
     private static void demo1() {
-        String sql = "SELECT * FROM Drinks WHERE UnitPrice BETWEEN ? AND ?";
+        String sql = "SELECT * FROM DichVu WHERE UnitPrice BETWEEN ? AND ?";
         var rs = XJdbc.executeQuery(sql, 1.5, 5.0);
     }
 
     private static void demo2() {
-        String sql = "SELECT max(UnitPrice) FROM Drinks WHERE UnitPrice > ?";
+        String sql = "SELECT max(UnitPrice) FROM DichVu WHERE UnitPrice > ?";
         var maxPrice = XJdbc.getValue(sql, 1.5);
     }
 
     private static void demo3() {
-        String sql = "DELETE FROM Drinks WHERE UnitPrice < ?";
+        String sql = "DELETE FROM DichVu WHERE UnitPrice < ?";
         var count = XJdbc.executeUpdate(sql, 0.0);
     }
 

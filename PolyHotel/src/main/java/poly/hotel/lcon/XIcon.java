@@ -1,4 +1,4 @@
-package poly.cafe.util;
+package Poly.Hotel.Icon;
 
 import java.awt.Image;
 import java.io.File;

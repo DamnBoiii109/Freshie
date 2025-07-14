@@ -1,4 +1,4 @@
-package poly.cafe.util;
+package poly.hotel.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

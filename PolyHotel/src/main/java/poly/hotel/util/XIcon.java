@@ -1,4 +1,4 @@
-package Poly.Hotel.util;
+package poly.hotel.util;
 
 import java.awt.Image;
 import java.io.File;

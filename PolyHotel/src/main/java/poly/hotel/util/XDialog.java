@@ -1,4 +1,4 @@
-package poly.cafe.util;
+package Poly.Hotel.util;
 
 import javax.swing.JOptionPane;
 

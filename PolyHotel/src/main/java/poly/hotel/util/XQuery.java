@@ -1,4 +1,4 @@
-package poly.cafe.util;
+package poly.hotel.util;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

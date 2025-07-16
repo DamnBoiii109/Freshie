@@ -3,7 +3,7 @@ package Poly.Hotel.dao.impl;
 
 import java.util.List;
 import poly.cafe.dao.DrinkDAO;
-import poly.cafe.entity.Drink;
+import poly.cafe.entity.DatDichVu;
 import poly.cafe.util.XQuery;
 
 /**

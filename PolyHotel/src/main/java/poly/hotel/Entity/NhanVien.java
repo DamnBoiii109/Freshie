@@ -1,8 +1,18 @@
 package poly.hotel.Entity;
 
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Data
 public class NhanVien{
-  String TenDangNhap;
-  String MatKhau;
-  boolean KichHoat;
-  String QuanLy;
+  private String TenDangNhap;
+  private String MatKhau;
+  private boolean KichHoat;
+  private boolean QuanLy;
 }

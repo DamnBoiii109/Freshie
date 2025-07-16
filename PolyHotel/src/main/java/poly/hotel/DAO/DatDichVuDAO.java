@@ -2,13 +2,13 @@
 package Poly.Hotel.dao;
 
 import java.util.List;
-import poly.cafe.entity.Drink;
+import poly.cafe.entity.DatDichVu;
 
 /**
  *
  * @author truon
  */
-public interface DrinkDAO extends CrudDAO<Drink, String>{ 
-    List<Drink> findByCategoryId(String categoryId); 
+public interface DrinkDAO extends CrudDAO<DatDichVu, String>{ 
+    List<DatDichVu> findByCategoryId(String categoryId); 
 } 
 

@@ -9,6 +9,6 @@ import poly.cafe.entity.DatDichVu;
  * @author truon
  */
 public interface DatDichVuDAO extends CrudDAO<DatDichVu, String>{ 
-    List<DatDichVu> findByCategoryId(String categoryId); 
+    List<DatDichVu> findByLoaiPhongId(String LoaiPhongId); 
 } 
 

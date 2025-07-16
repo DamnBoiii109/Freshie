@@ -1,1 +1,56 @@
-//con cac ba may bao
+package poly.hotel.DAO_Implements;
+
+import java.util.List;
+import poly.hotel.DAO.NhanVienDAO;
+import poly.hotel.Entity.NhanVien;
+import poly.hotel.util.XJdbc;
+import poly.hotel.util.XQuery;
+
+public class NhanVienDAOImpl implements NhanVienDAO {
+
+    String createSql = "INSERT INTO NhanVien(Username,Password,Fullname,Enable,Manager) VALUES(?, ?)";
+    String updateSql = "UPDATE NhanVien SET Password=? WHERE Username=? ";
+    String deleteByIdSql = "DELETE FROM NhanVien WHERE Username=?";
+    String findAllSql = "SELECT * FROM NhanVien";
+    String findByIdSql = "SELECT * FROM NhanVien WHERE Username=?";
+
+    @Override
+    public User create(NhanVien entity) {
+        Object[] values = {
+            entity.getUsername(),
+            entity.getPassword(),
+            entity.isEnabled(),
+            entity.getFullname(),
+            entity.isManager()
+        };
+        XJdbc.executeUpdate(createSql, values);
+        return entity;
+    }
+
+    @Override
+    public void update(NhanVien entity) {
+        Object[] values = {
+            entity.getPassword(),
+            entity.isEnabled(),
+            entity.getFullname(),
+            entity.isManager(),
+            entity.getUsername()
+        };
+        XJdbc.executeUpdate(updateSql, values);
+    }
+
+    @Override
+    public void deleteById(String id) {
+        XJdbc.executeUpdate(deleteByIdSql, id);
+    }
+
+    @Override
+    public List<NhanVien> findAll() {
+        return XQuery.getBeanList(User.class, findAllSql);
+    }
+
+    @Override
+    public NhanVien findById(String id) {
+        return XQuery.getSingleBean(NhanVien.class, findByIdSql, id);
+    }
+}

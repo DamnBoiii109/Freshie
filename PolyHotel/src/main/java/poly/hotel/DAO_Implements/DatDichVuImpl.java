@@ -17,7 +17,7 @@ public class DatDichVuDAOImpl implements DatDichVuDAO {
     String findAllSql = "…"; 
     String findByIdSql = "…"; 
  
-    String findByCategoryIdSql = "SELECT * FROM Drinks WHERE CategoryId=?"; 
+    String findByCategoryIdSql = "SELECT * FROM Drinks WHERE LoaiPhongId=?"; 
  
     @Override 
     public DatDichVu create(DatDichVu entity) {
@@ -37,7 +37,7 @@ public class DatDichVuDAOImpl implements DatDichVuDAO {
     } 
  
     @Override 
-    public List<DatDichVu> findByCategoryId(String categoryId) { 
-        return XQuery.getBeanList(DatDichVu.class, findByCategoryIdSql, categoryId);
+    public List<DatDichVu> findByCategoryId(String LoaiPhongId) { 
+        return XQuery.getBeanList(DatDichVu.class, findByLoaiPhongIdSql, LoaiPhongId);
 }
 }

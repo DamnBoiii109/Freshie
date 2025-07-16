@@ -1,4 +1,4 @@
-package poly.hotel.dao;
+package poly.hotel.DAO;
 
 import poly.hotel.entity.NhanVien;
 

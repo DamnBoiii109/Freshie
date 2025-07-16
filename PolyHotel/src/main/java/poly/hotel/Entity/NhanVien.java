@@ -1,4 +1,8 @@
 package poly.hotel.Entity;
+
 public class NhanVien{
-  String 
+  String TenDangNhap;
+  String MatKhau;
+  boolean KichHoat;
+  String QuanLy;
 }

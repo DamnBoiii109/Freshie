@@ -1,3 +1,4 @@
 package poly.hotel.Entity;
-public class NhanVien;
+public class NhanVien{
   String 
+}

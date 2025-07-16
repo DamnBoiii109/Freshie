@@ -28,7 +28,7 @@ public class DatDichVuDAOImpl implements DatDichVuDAO {
     @Override 
     public void deleteById(String id) {} 
     @Override 
-    public List< Drink> findAll() {
+    public List< DatDichVu> findAll() {
         return null;
     } 
     @Override 

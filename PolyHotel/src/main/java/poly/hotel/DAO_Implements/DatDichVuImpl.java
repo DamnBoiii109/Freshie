@@ -2,7 +2,7 @@
 package Poly.Hotel.dao.impl;
 
 import java.util.List;
-import poly.cafe.dao.DrinkDAO;
+import poly.cafe.dao.DatDichVuDAO;
 import poly.cafe.entity.DatDichVu;
 import poly.cafe.util.XQuery;
 
@@ -10,7 +10,7 @@ import poly.cafe.util.XQuery;
  *
  * @author truon
  */
-public class DrinkDAOImpl implements DrinkDAO { 
+public class DatDichVuDAOImpl implements DatDichVuDAO { 
     String createSql = "…"; 
     String updateSql = "…"; 
     String deleteSql = "…"; 
@@ -20,11 +20,11 @@ public class DrinkDAOImpl implements DrinkDAO {
     String findByCategoryIdSql = "SELECT * FROM Drinks WHERE CategoryId=?"; 
  
     @Override 
-    public Drink create(Drink entity) {
+    public DatDichVu create(DatDichVu entity) {
         return null;
     } 
     @Override 
-    public void update(Drink entity) {}
+    public void update(DatDichVu entity) {}
     @Override 
     public void deleteById(String id) {} 
     @Override 
@@ -32,12 +32,12 @@ public class DrinkDAOImpl implements DrinkDAO {
         return null;
     } 
     @Override 
-    public Drink findById(String id) {
+    public DatDichVu findById(String id) {
         return null;
     } 
  
     @Override 
-    public List<Drink> findByCategoryId(String categoryId) { 
-        return XQuery.getBeanList(Drink.class, findByCategoryIdSql, categoryId);
+    public List<DatDichVu> findByCategoryId(String categoryId) { 
+        return XQuery.getBeanList(DatDichVu.class, findByCategoryIdSql, categoryId);
 }
 }

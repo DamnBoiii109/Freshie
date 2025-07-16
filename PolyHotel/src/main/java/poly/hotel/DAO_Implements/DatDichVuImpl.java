@@ -17,7 +17,7 @@ public class DatDichVuDAOImpl implements DatDichVuDAO {
     String findAllSql = "…"; 
     String findByIdSql = "…"; 
  
-    String findByCategoryIdSql = "SELECT * FROM Drinks WHERE LoaiPhongId=?"; 
+    String findByCategoryIdSql = "SELECT * FROM DatDichVu WHERE LoaiPhongId=?"; 
  
     @Override 
     public DatDichVu create(DatDichVu entity) {

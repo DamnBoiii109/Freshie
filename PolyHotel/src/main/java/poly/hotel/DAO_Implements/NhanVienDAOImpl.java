@@ -17,11 +17,11 @@ public class NhanVienDAOImpl implements NhanVienDAO {
     @Override
     public User create(NhanVien entity) {
         Object[] values = {
-            entity.getUsername(),
-            entity.getPassword(),
-            entity.isEnabled(),
+            entity.getTenDangNhap(),
+            entity.getMatKhau(),
+            entity.isKichHoat(),
             entity.getImage(),
-            entity.isManager()
+            entity.isQuanLy()
         };
         XJdbc.executeUpdate(createSql, values);
         return entity;
@@ -30,11 +30,11 @@ public class NhanVienDAOImpl implements NhanVienDAO {
     @Override
     public void update(NhanVien entity) {
         Object[] values = {
-            entity.getPassword(),
-            entity.isEnabled(),
+            entity.getMatKhau(),
+            entity.isKichHoat(),
             entity.getImage(),
-            entity.isManager(),
-            entity.getUsername()
+            entity.isQuanLy(),
+            entity.getTenDangNhap()
         };
         XJdbc.executeUpdate(updateSql, values);
     }

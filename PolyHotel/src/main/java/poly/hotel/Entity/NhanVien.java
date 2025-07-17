@@ -14,5 +14,6 @@ public class NhanVien{
   private String TenDangNhap;
   private String MatKhau;
   private boolean KichHoat;
+  private String Image;
   private boolean QuanLy;
 }

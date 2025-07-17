@@ -8,11 +8,11 @@ import poly.hotel.util.XQuery;
 
 public class NhanVienDAOImpl implements NhanVienDAO {
 
-    String createSql = "INSERT INTO NhanVien(Username,Password,Fullname,Enable,Manager) VALUES(?, ?)";
-    String updateSql = "UPDATE NhanVien SET Password=? WHERE Username=? ";
-    String deleteByIdSql = "DELETE FROM NhanVien WHERE Username=?";
+    String createSql = "INSERT INTO NhanVien(TenNguoiDung,MatKhau,KichHoat,AnhDaiDien,VaiTroQuanLy) VALUES(?, ?, ?, ?, ?)";
+    String updateSql = "UPDATE NhanVien SET MatKhau=? WHERE TenNguoiDung=? ";
+    String deleteByIdSql = "DELETE FROM NhanVien WHERE TenNguoiDung=?";
     String findAllSql = "SELECT * FROM NhanVien";
-    String findByIdSql = "SELECT * FROM NhanVien WHERE Username=?";
+    String findByIdSql = "SELECT * FROM NhanVien WHERE TenNguoiDung=?";
 
     @Override
     public User create(NhanVien entity) {
@@ -20,7 +20,7 @@ public class NhanVienDAOImpl implements NhanVienDAO {
             entity.getUsername(),
             entity.getPassword(),
             entity.isEnabled(),
-            entity.getFullname(),
+            entity.getImage(),
             entity.isManager()
         };
         XJdbc.executeUpdate(createSql, values);
@@ -32,7 +32,7 @@ public class NhanVienDAOImpl implements NhanVienDAO {
         Object[] values = {
             entity.getPassword(),
             entity.isEnabled(),
-            entity.getFullname(),
+            entity.getImage(),
             entity.isManager(),
             entity.getUsername()
         };

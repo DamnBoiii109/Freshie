@@ -14,7 +14,9 @@ import lombok.Data;
 @Builder 
 @Data 
 public class Category { 
-    private String id; 
-    private String name; 
+    private String LoaiPhong; 
+    private String TenLoaiPhong; 
+    private double GiaPhong;
+    private String GhiChu;
 } 
 

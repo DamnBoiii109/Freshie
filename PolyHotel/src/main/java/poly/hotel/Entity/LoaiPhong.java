@@ -1,5 +1,5 @@
 
-package Poly.hotel.entity;
+package poly.hotel.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -11,7 +11,7 @@ import lombok.Data;
 @AllArgsConstructor 
 @Builder 
 @Data 
-public class Drink { 
+public class DatDichVu { 
     private String MaDatDichVu; 
     private String NgayDat; 
     @Builder.Default 

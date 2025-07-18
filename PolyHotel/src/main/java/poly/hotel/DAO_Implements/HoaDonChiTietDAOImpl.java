@@ -10,17 +10,15 @@ import poly.Hotel.entity.ChiTietHoaDon;
  * @author truon
  */
 public class ChiTietHoaDonDAOImpl implements ChiTietHoaDonDAO { 
-    String createSql = "…"; 
-    String updateSql = "…"; 
-    String deleteSql = "…"; 
-    String findAllSql = "SELECT bd.*, d.name AS TenDichVu  \n" +
-"FROM ChiTietHoaDon bd JOIN DatDichVu d ON d.Id=bd.DichVuId"; 
-    String findByIdSql = "SELECT bd.*, d.name AS TenDichVu  \n" +
-"FROM ChiTietHoaDon bd JOIN DatDichVu d ON d.Id=bd.DichVuId WHERE bd.Id=?";  
-    String findByChiTietHoaDonIdSql = "SELECT bd.*, d.name AS TenDichVu  \n" +
-"FROM ChiTietHoaDon bd JOIN DatDichVu d ON d.Id=bd.DichVuId WHERE bd.HoaDonId=?"; 
-String findByDichVuIdSql = "SELECT bd.*, d.name AS TenDichVu  \n" +
-"FROM ChiTietHoaDon bd JOIN DatDichVu d ON d.Id=bd.DichVuId WHERE bd.DichVuId=?"; 
+    private final String createSql = "INSERT INTO SOF2042_BillDetails(BillId, DrinkId, UnitPrice, Discount, Quantity) VALUES(?, ?, ?, ?, ?)";
+    private final String updateSql = "UPDATE SOF2042_BillDetails SET BillId=?, DrinkId=?, UnitPrice=?, Discount=?, Quantity=? WHERE Id=?";
+    private final String deleteByIdSql = "DELETE FROM SOF2042_BillDetails WHERE Id=?";
+
+    private final String findAllSql = "SELECT bd.*, d.name AS drinkName FROM SOF2042_BillDetails bd JOIN SOF2042_Drinks d ON d.Id=bd.DrinkId";
+    private final String findByIdSql = findAllSql + " WHERE bd.Id=?";
+    private final String findLastSql = findAllSql + " WHERE bd.Id IN(SELECT max(Id) FROM SOF2042_BillDetails)";
+    private final String findByBillIdSql = findAllSql + " WHERE bd.BillId=?";
+    private final String findByDrinkIdSql = findAllSql + " WHERE bd.DrinkId=?";
 @Override 
 public ChiTietHoaDon create(ChiTietHoaDon entity) {return null;
 } 

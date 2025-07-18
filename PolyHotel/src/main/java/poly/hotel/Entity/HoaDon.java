@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @Data
 public class HoaDon {  
-    private String maHoaDon;         
+    private String MaHoaDon;         
     private String maDatDichVu;     
     private Date ngayTaoDon;         
     private double thanhTien;        

@@ -41,7 +41,7 @@ public class PhongDAOImpl implements PhongDAO {
     }
 
     @Override
-    public void deleteById(Integer MaPhong) {
+    public void deleteByMaPhong(Integer MaPhong) {
         try {
             XJdbc.executeUpdate(deleteSql, MaPhong);
         } catch (Exception e) {
@@ -68,7 +68,7 @@ public class PhongDAOImpl implements PhongDAO {
     }
 
     @Override
-    public Phong findById(Integer MaPhong) {
+    public Phong findByMaPhong(Integer MaPhong) {
         try (ResultSet rs = XJdbc.executeQuery(findByIdSql, MaPhong)) {
             if (rs.next()) {
                 Phong Phong = new Phong();

@@ -2,9 +2,9 @@
 package Poly.Hotel.dao.impl;
 
 import java.util.List;
-import poly.cafe.dao.DatDichVuDAO;
-import poly.cafe.entity.DatDichVu;
-import poly.cafe.util.XQuery;
+import poly.Hotel.dao.DatDichVuDAO;
+import poly.Hotel.entity.DatDichVu;
+import poly.Hotel.util.XQuery;
 
 /**
  *

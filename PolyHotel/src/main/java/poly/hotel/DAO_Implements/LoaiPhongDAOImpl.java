@@ -13,7 +13,7 @@ import poly.cafe.util.XQuery;
  */
 public class LoaiPhongDAOImpl implements LoaiPhongDAO { 
  
-    String createSql = "INSERT INTO LoaiPhong(LoaiPhong, TenLoaiPhong, GiaPhong, GhiChu) VALUES(?,?)"; 
+    String createSql = "INSERT INTO LoaiPhong(LoaiPhong, TenLoaiPhong, GiaPhong, GhiChu) VALUES(?,?,?,?)"; 
     String updateSql = "UPDATE LoaiPhong SET TenLoaiPhong=? WHERE LoaiPhong=?"; 
     String deleteSql = "DELETE FROM LoaiPhong WHERE LoaiPhong=?"; 
     String findAllSql = "SELECT * FROM LoaiPhong"; 

@@ -2,8 +2,8 @@
 package Poly.Hotel.dao.impl;
 
 import java.util.List;
-import poly.cafe.dao.CategoryDAO;
-import poly.cafe.entity.Category;
+import poly.cafe.dao.LoaiPhongDAO;
+import poly.cafe.entity.LoaiPhong;
 import poly.cafe.util.XJdbc;
 import poly.cafe.util.XQuery;
 
@@ -11,7 +11,7 @@ import poly.cafe.util.XQuery;
  *
  * @author truon
  */
-public class CategoryDAOImpl implements CategoryDAO { 
+public class LoaiPhongDAOImpl implements LoaiPhongDAO { 
  
     String createSql = "INSERT INTO Categories(Id, Name) VALUES(?, ?)"; 
     String updateSql = "UPDATE Categories SET Name=? WHERE Id=?"; 
@@ -20,7 +20,7 @@ public class CategoryDAOImpl implements CategoryDAO {
     String findByIdSql = "SELECT * FROM Categories WHERE Id=?"; 
  
     @Override 
-    public Category create(Category entity) { 
+    public LoaiPhong create(LoaiPhong entity) { 
         Object[] values = { 
             entity.getId(), 
             entity.getName() 
@@ -29,7 +29,7 @@ public class CategoryDAOImpl implements CategoryDAO {
         return entity; 
     } 
     @Override 
-    public void update(Category entity) { 
+    public void update(LoaiPhong entity) { 
         Object[] values = { 
             entity.getName(), 
             entity.getId() 
@@ -41,11 +41,11 @@ public class CategoryDAOImpl implements CategoryDAO {
         XJdbc.executeUpdate(deleteSql, id); 
     } 
     @Override 
-    public List<Category> findAll() { 
-        return XQuery.getEntityList(Category.class, findAllSql); 
+    public List<LoaiPhong> findAll() { 
+        return XQuery.getEntityList(LoaiPhong.class, findAllSql); 
     } 
     @Override 
-    public Category findById(String id) { 
-        return XQuery.getSingleBean(Category.class, findByIdSql, id); 
+    public LoaiPhong findById(String id) { 
+        return XQuery.getSingleBean(LoaiPhong.class, findByIdSql, id); 
     } 
 } 

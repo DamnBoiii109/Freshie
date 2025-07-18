@@ -2,7 +2,7 @@
 package Poly.Hotel.dao;
 
 import java.util.List;
-import poly.cafe.entity.DatDichVu;
+import poly.Hotel.entity.DatDichVu;
 
 /**
  *

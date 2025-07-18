@@ -1,5 +1,5 @@
 
-package Poly.Hotel.dao.impl;
+package poly.hotel.DAO.Impl;
 
 import java.util.List;
 import poly.cafe.dao.LoaiPhongDAO;

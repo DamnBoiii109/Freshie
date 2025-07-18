@@ -1,7 +1,7 @@
 
-package Poly.Hotel.dao;
+package poly.hotel.dao;
 
-import Poly.Hotel.entity.LoaiPhong;
+import poly.hotel.entity.LoaiPhong;
 
 /**
  *

@@ -14,8 +14,8 @@ import lombok.LoaiPhong;
 @AllArgsConstructor
 @Builder
 @Data
-public class Card {
-    private Integer id;
-private int status;
+public class Phong {
+    private Integer MaPhong;
+private int TrangThaiPhong;
 }
 

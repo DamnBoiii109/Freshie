@@ -11,11 +11,11 @@ import poly.cafe.util.XQuery;
 
 public class DatDichVuDAOImpl implements DatDichVuDAO {
 
-    private final String createSql = "INSERT INTO SOF2042_DatDichVu(MaDatDichVu, NgayDat,NgayKetThuc,TrangThaiDat, TrangThaiHuy, TenNguoiDung, MaPhong) VALUES(?, ?, ?, ?, ?, ?, ?)";
-    private final String updateSql = "UPDATE SOF2042_Drinks SET NgayDat=?, NgayKetThuc=?, TrangThaiDat=?, TrangThaiHuy=?, TenNguoiDung=?, LoaiPhongId=? WHERE MaDatDichVu=?";
-    private final String deleteByIdSql = "DELETE FROM SOF2042_DatDichVu WHERE MaDatDichVu=?";
+    private final String createSql = "INSERT INTO DatDichVu(MaDatDichVu, NgayDat,NgayKetThuc,TrangThaiDat, TrangThaiHuy, TenNguoiDung, MaPhong) VALUES(?, ?, ?, ?, ?, ?, ?)";
+    private final String updateSql = "UPDATE Drinks SET NgayDat=?, NgayKetThuc=?, TrangThaiDat=?, TrangThaiHuy=?, TenNguoiDung=?, LoaiPhongId=? WHERE MaDatDichVu=?";
+    private final String deleteByIdSql = "DELETE FROM DatDichVu WHERE MaDatDichVu=?";
     
-    private final String findAllSql = "SELECT * FROM SOF2042_DatDichVu";
+    private final String findAllSql = "SELECT * FROM DatDichVu";
     private final String findByIdSql = findAllSql + " WHERE MaDatDichVu =?";
     private final String findByCategoryIdSql = findAllSql + " WHERE DatDichVuId=?";
 

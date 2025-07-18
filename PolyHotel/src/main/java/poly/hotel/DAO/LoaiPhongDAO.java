@@ -1,12 +1,12 @@
 
 package Poly.Hotel.dao;
 
-import poly.cafe.entity.Category;
+import Poly.Hotel.entity.LoaiPhong;
 
 /**
  *
  * @author truon
  */
-public interface CategoryDAO extends CrudDAO<Category, String> {
+public interface LoaiPhongDAO extends CrudDAO<LoaiPhong, String> {
     
 }

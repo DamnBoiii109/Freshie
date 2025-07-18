@@ -69,10 +69,10 @@ public class PhongDAOImpl implements PhongDAO {
 
     @Override
     public Phong findByMaPhong(Integer MaPhong) {
-        try (ResultSet rs = XJdbc.executeQuery(findByIdSql, MaPhong)) {
+        try (ResultSet rs = XJdbc.executeQuery(findByMaPhongSql, MaPhong)) {
             if (rs.next()) {
                 Phong Phong = new Phong();
-                Phong.setId(rs.getInt("MaPhong"));
+                Phong.setMaPhong(rs.getInt("MaPhong"));
                 Phong.setTrangThaiPhong(rs.getInt("TrangThaiPhong"));
                 return Phong;
             }

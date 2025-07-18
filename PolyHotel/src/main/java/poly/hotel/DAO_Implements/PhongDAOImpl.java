@@ -13,7 +13,7 @@ import poly.cafe.util.XJdbc;
  */
 public class PhongDAOImpl implements PhongDAO {
 
-    private final String createSql = "INSERT INTO Phong (MaPhong, TrangThaiPhong) VALUES (?, ?)";
+    private final String createSql = "INSERT INTO Phong (MaPhong, TrangThaiPhong,TenPhong, LoaiPhong) VALUES (TenPhong, LoaiPhong)";
     private final String updateSql = "UPDATE Phong SET TrangThaiPhong = ? WHERE MaPhong = ?";
     private final String deleteSql = "DELETE FROM Phong WHERE MaPhong = ?";
     private final String findAllSql = "SELECT * FROM Phong";
